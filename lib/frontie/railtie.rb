@@ -1,6 +1,7 @@
 require 'frontie/active_state_helper'
 require 'frontie/date_time_helper'
 require 'frontie/links_helper'
+require 'frontie/map_helper'
 require 'frontie/utility_helper'
 
 module Frontie
@@ -13,6 +14,9 @@ module Frontie
     end
     initializer 'links.helper' do |app|
       ActionView::Base.send :include, LinksHelper
+    end
+    initializer 'map.helper' do |app|
+      ActionView::Base.send :include, MapHelper
     end
     initializer 'utility.helper' do |app|
       ActionView::Base.send :include, UtilityHelper
