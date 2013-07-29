@@ -9,7 +9,7 @@ module DateTimeHelper
 
   # Facny date
   def fancy_date date
-    date.strftime('%m/%d/%Y at %I:%M %p') if date.present? and type == 'compact'    
+    date.strftime('%m/%d/%Y at %I:%M %p') if date.present?
   end
 
   # Full and fancy date
