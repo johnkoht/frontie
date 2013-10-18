@@ -1,5 +1,7 @@
 require "frontie/version"
 
 module Frontie
-  require 'frontie/railtie' if defined?(Rails)
+  if defined?(Rails)
+    require "frontie/engine"
+  end
 end
