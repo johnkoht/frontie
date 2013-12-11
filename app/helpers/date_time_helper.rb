@@ -4,7 +4,7 @@ module DateTimeHelper
   def timeago time, options = {}
     options[:title] = options[:title] == false ? nil : l(time)
     options[:datetime] = time.to_s
-    content_tag(tag, "#{time_ago_in_words(time).capitalize} ago", options)
+    content_tag(:abbr, "#{time_ago_in_words(time).capitalize} ago", options) if time
   end
 
   # Facny date
