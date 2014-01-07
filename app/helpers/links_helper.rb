@@ -2,10 +2,8 @@ module LinksHelper
 
   # Simple method to create icon buttons
   def icon_link_to text, path, icon, params = {}
-    icon = icon_link(text, icon)
-    link_to path, params do
-      icon
-    end
+    params[:icon] = icon
+    link_to text, path, params
   end
 
   # Similar to icon_link_to but uses the <button> tag
